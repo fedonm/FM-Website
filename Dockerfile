@@ -9,7 +9,7 @@ ENV VITE_TURNSTILE_SITE_KEY=$VITE_TURNSTILE_SITE_KEY
 
 # Install all dependencies for building
 COPY package*.json ./
-RUN npm ci
+RUN npm install
 
 # Copy source files
 COPY . .
@@ -30,7 +30,7 @@ RUN apk add --no-cache curl
 
 # Install only production dependencies
 COPY package*.json ./
-RUN npm ci --omit=dev && npm cache clean --force
+RUN npm install --omit=dev && npm cache clean --force
 
 # Copy compiled frontend and bundled server from builder stage
 COPY --from=builder /app/dist ./dist
