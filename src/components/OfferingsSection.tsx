@@ -38,7 +38,7 @@ export const OfferingsSection: React.FC = () => {
   };
 
   return (
-    <section id="offerings" className="py-20 md:py-32 border-t border-stone-200/80 dark:border-stone-800/80 relative">
+    <section id="offerings" className="py-20 md:py-32 border-t border-stone-200/80 dark:border-stone-800/80 relative scroll-mt-20 sm:scroll-mt-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useApp } from '../context/AppContext';
 import { navigationData } from '../data/content';
-import { Sun, Moon, Menu, X, Sparkles } from 'lucide-react';
+import { Sun, Moon, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 const GreekFlag: React.FC<{ className?: string }> = ({ className = "w-5 h-3.5" }) => (
@@ -56,14 +56,35 @@ export const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [navItems]);
 
+  const scrollToSection = (targetId: string) => {
+    const targetEl = document.getElementById(targetId);
+    if (!targetEl) return;
+
+    const navOffset = 76;
+    const bodyRect = document.body.getBoundingClientRect().top;
+    const elementRect = targetEl.getBoundingClientRect().top;
+    const elementPosition = elementRect - bodyRect;
+    const offsetPosition = Math.max(0, elementPosition - navOffset);
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth',
+    });
+  };
+
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const targetId = href.replace('#', '');
-    const targetEl = document.getElementById(targetId);
-    if (targetEl) {
-      targetEl.scrollIntoView({ behavior: 'smooth' });
+    
+    if (mobileMenuOpen) {
+      setMobileMenuOpen(false);
+      // Allow mobile drawer transition to start without interrupting smooth scrolling
+      setTimeout(() => {
+        scrollToSection(targetId);
+      }, 80);
+    } else {
+      scrollToSection(targetId);
     }
-    setMobileMenuOpen(false);
   };
 
   return (
@@ -219,13 +240,6 @@ export const Navbar: React.FC = () => {
                   </a>
                 );
               })}
-              <div className="pt-3 border-t border-stone-200 dark:border-slate-800 mt-2 flex items-center justify-between text-xs text-stone-500 dark:text-slate-400">
-                <span className="flex items-center gap-1.5">
-                  <Sparkles className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" />
-                  {language === 'el' ? 'Ιδιαίτερα Μαθήματα Χημείας' : 'Chemistry Tutoring'}
-                </span>
-                <span>{language === 'el' ? 'Θεσσαλονίκη & Online' : 'Thessaloniki & Online'}</span>
-              </div>
             </div>
           </motion.div>
         )}
