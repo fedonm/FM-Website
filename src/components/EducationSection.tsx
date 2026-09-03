@@ -32,11 +32,11 @@ export const EducationSection: React.FC = () => {
   };
 
   return (
-    <section id="education" className="py-20 md:py-32 border-t border-stone-200/80 dark:border-stone-800/80 relative scroll-mt-20 sm:scroll-mt-24">
+    <section id="education" className="py-8 md:py-14 relative scroll-mt-20 sm:scroll-mt-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-2xl mb-14 md:mb-20">
+        <div className="max-w-2xl mb-8 md:mb-12">
           <div className="flex items-center gap-2 text-xs font-mono tracking-widest text-teal-700 dark:text-teal-400 uppercase mb-2 font-medium">
             <span>04</span>
             <span>—</span>
@@ -146,8 +146,8 @@ export const EducationSection: React.FC = () => {
         </div>
 
         {/* Integrated Scientific & Research Focus Areas (from Sector 04) */}
-        <div className="mt-20 pt-16 border-t border-stone-200/80 dark:border-stone-800/80">
-          <div className="max-w-2xl mb-10">
+        <div className="mt-12 pt-4">
+          <div className="max-w-2xl mb-8">
             <h3 className="font-serif text-2xl sm:text-3xl font-normal text-stone-900 dark:text-stone-100">
               {researchData.scientificInterestsTitle}
             </h3>

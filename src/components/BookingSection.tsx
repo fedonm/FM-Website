@@ -178,11 +178,11 @@ export const BookingSection: React.FC = () => {
   };
 
   return (
-    <section id="booking" className="py-20 md:py-32 border-t border-stone-200/80 dark:border-slate-800/80 relative scroll-mt-20 sm:scroll-mt-24">
+    <section id="booking" className="py-8 md:py-14 relative scroll-mt-20 sm:scroll-mt-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-2xl mb-14 md:mb-20">
+        <div className="max-w-2xl mb-8 md:mb-12">
           <div className="flex items-center gap-2 text-xs font-mono tracking-widest text-teal-700 dark:text-teal-400 uppercase mb-2 font-medium">
             <span>09</span>
             <span>—</span>

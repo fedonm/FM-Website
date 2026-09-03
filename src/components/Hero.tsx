@@ -20,7 +20,7 @@ export const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative min-h-[85vh] flex items-center pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden scroll-mt-24"
+      className="relative flex items-center pt-24 pb-8 md:pt-32 md:pb-12 overflow-hidden scroll-mt-24"
     >
       {/* Subtle radial glow top-right for light/dark depth */}
       <div className="absolute -top-24 right-0 w-96 h-96 bg-teal-500/5 dark:bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
