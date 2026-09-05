@@ -1,6 +1,6 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
-import { footerData, navigationData } from '../data/content';
+import { footerData, navigationData } from '../data';
 import { Atom, Mail, Linkedin, MapPin, Sparkles } from 'lucide-react';
 
 export const Footer: React.FC = () => {

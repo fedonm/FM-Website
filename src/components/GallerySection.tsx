@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
-import { galleryData } from '../data/content';
+import { galleryData } from '../data';
 import { GalleryItem } from '../types';
 import { LightboxModal } from './LightboxModal';
 import { Atom, FlaskConical, BookOpen, User, Maximize2, Sparkles } from 'lucide-react';
@@ -56,7 +56,7 @@ export const GallerySection: React.FC = () => {
         {/* Section Header */}
         <div className="max-w-2xl mb-8 md:mb-12">
           <div className="flex items-center gap-2 text-xs font-mono tracking-widest text-teal-700 dark:text-teal-400 uppercase mb-2 font-medium">
-            <span>08</span>
+            <span>07</span>
             <span>—</span>
             <span>{language === 'el' ? 'Οπτικό Αρχείο' : 'Visual Record'}</span>
           </div>
@@ -81,10 +81,18 @@ export const GallerySection: React.FC = () => {
               className="group cursor-pointer rounded-2xl overflow-hidden bg-white dark:bg-stone-900 border border-stone-200/80 dark:border-stone-800 hover:border-teal-500/60 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
             >
               {/* Image / Artwork Area */}
-              <div className="relative aspect-4/3 bg-stone-100 dark:bg-stone-950 flex flex-col items-center justify-center p-6 overflow-hidden">
-                <div className="p-4 rounded-full bg-white dark:bg-stone-900 shadow-sm border border-stone-200/60 dark:border-stone-800">
-                  {renderIcon(item.placeholderType)}
-                </div>
+              <div className="relative aspect-4/3 bg-stone-100 dark:bg-stone-950 flex flex-col items-center justify-center overflow-hidden">
+                {item.imageSrc ? (
+                  <img 
+                    src={item.imageSrc} 
+                    alt={item.title} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                ) : (
+                  <div className="p-4 rounded-full bg-white dark:bg-stone-900 shadow-sm border border-stone-200/60 dark:border-stone-800">
+                    {renderIcon(item.placeholderType)}
+                  </div>
+                )}
 
                 {/* Hover overlay hint */}
                 <div className="absolute inset-0 bg-stone-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-xs">

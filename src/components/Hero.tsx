@@ -1,6 +1,6 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
-import { heroData } from '../data/content';
+import { heroData } from '../data';
 import { ArrowDownRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import profilePhoto from '../assets/images/5Clipped_image_20231016_134059.png';
@@ -44,13 +44,13 @@ export const Hero: React.FC = () => {
                 <h1 className="font-serif text-4xl sm:text-5xl font-normal tracking-tight text-stone-900 dark:text-slate-50 leading-[1.08]">
                   {data.greeting}
                 </h1>
-                <p className="text-base sm:text-lg font-sans font-medium text-teal-700 dark:text-teal-400 tracking-wide">
+                <p className="font-sans font-medium text-teal-700 dark:text-teal-400 tracking-wide text-[23px] leading-[27px]">
                   {data.subtitle}
                 </p>
               </div>
 
               {/* Integrated Portrait Box positioned closely alongside the name */}
-              <div className="shrink-0 text-left">
+              <div className="shrink-0 text-left ml-[0px]">
                 <div className="relative rounded-2xl bg-white/90 dark:bg-[#131f36]/90 border border-stone-200/90 dark:border-slate-800 p-1.5 shadow-md backdrop-blur-xs w-28 h-36 sm:w-32 sm:h-40">
                   <div className="relative w-full h-full rounded-xl overflow-hidden bg-stone-100 dark:bg-[#0c1524] border border-stone-200/60 dark:border-slate-800/80 shadow-inner">
                     <img

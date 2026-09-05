@@ -146,7 +146,15 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
 
           {/* Main Visual Display Area */}
           <div className="flex-1 bg-stone-950 min-h-[320px] sm:min-h-[420px] flex items-center justify-center relative overflow-hidden">
-            {renderPlaceholderArtwork(item.placeholderType)}
+            {item.imageSrc ? (
+              <img 
+                src={item.imageSrc} 
+                alt={item.title} 
+                className="max-w-full max-h-[90vh] object-contain"
+              />
+            ) : (
+              renderPlaceholderArtwork(item.placeholderType)
+            )}
           </div>
 
           {/* Sidebar Info & Caption */}

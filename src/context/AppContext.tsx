@@ -7,6 +7,8 @@ interface AppContextType {
   theme: Theme;
   toggleTheme: () => void;
   setTheme: (theme: Theme) => void;
+  preselectedLevel: string | null;
+  setPreselectedLevel: (level: string | null) => void;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -75,12 +77,14 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     }
   }, [theme]);
 
+  const [preselectedLevel, setPreselectedLevel] = useState<string | null>(null);
+
   useEffect(() => {
     document.documentElement.setAttribute('lang', language);
   }, [language]);
 
   return (
-    <AppContext.Provider value={{ language, setLanguage, theme, toggleTheme, setTheme }}>
+    <AppContext.Provider value={{ language, setLanguage, theme, toggleTheme, setTheme, preselectedLevel, setPreselectedLevel }}>
       {children}
     </AppContext.Provider>
   );

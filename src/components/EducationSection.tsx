@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
-import { educationData, aboutData } from '../data/content';
+import { educationData, aboutData } from '../data';
 import { GraduationCap, ChevronDown, ChevronUp, MapPin, Award, CheckCircle2, Atom, FlaskConical, Dna, Layers } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 

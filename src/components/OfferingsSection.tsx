@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
-import { branchingCategoriesData } from '../data/content';
+import { branchingCategoriesData, bookingData } from '../data';
 import { BranchingCategory, SubCategory } from '../types';
 import { ChevronRight, ArrowRight, CheckCircle2, BookOpen, Layers, Target, Compass, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export const OfferingsSection: React.FC = () => {
-  const { language } = useApp();
+  const { language, setPreselectedLevel } = useApp();
   const categories: BranchingCategory[] = branchingCategoriesData[language];
+  const bookingDataLevelOptions = bookingData[language].levelOptions;
 
   // Active category index (defaults to 0)
   const [selectedCatId, setSelectedCatId] = useState<string>(categories[0].id);
@@ -31,6 +32,18 @@ export const OfferingsSection: React.FC = () => {
   };
 
   const handleBookCategory = (subjectTitle: string) => {
+    let levelIndex = 5; // default to 'Άλλο'
+    
+    if (currentSubcategory.id === 'sec-education') levelIndex = 1;
+    else if (currentSubcategory.id === 'panhellenic') levelIndex = 2;
+    else if (currentSubcategory.id === 'intl-curricula') levelIndex = 4;
+    else if (currentCategory.id === 'university-chemistry') levelIndex = 3;
+    
+    const targetLevel = bookingDataLevelOptions[levelIndex]?.value;
+    if (targetLevel) {
+      setPreselectedLevel(targetLevel);
+    }
+
     const bookingEl = document.getElementById('booking');
     if (bookingEl) {
       bookingEl.scrollIntoView({ behavior: 'smooth' });

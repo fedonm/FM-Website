@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
-import { philosophyData } from '../data/content';
+import { philosophyData } from '../data';
 import { Compass, Zap, Award, Atom, CheckCircle2, FlaskConical, ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -106,7 +106,7 @@ export const PhilosophySection: React.FC = () => {
           <div className="space-y-1 text-center md:text-left">
             <h4 className="font-serif text-xl sm:text-2xl font-normal text-white">
               {language === 'el'
-                ? '«Ο καλός καθηγητής δεν λύνει απλώς την άσκηση· διδάσκει στον μαθητή πώς να σκέφτεται.»'
+                ? '«Ο καλός καθηγητής δεν λύνει απλώς την άσκηση - διδάσκει στον μαθητή πώς να σκέφτεται.»'
                 : '"A great tutor doesn\'t merely solve problems; they teach students how to think independently."'}
             </h4>
           </div>

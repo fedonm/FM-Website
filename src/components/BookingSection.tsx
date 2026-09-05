@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useApp } from '../context/AppContext';
-import { bookingData } from '../data/content';
+import { bookingData } from '../data';
 import { BookingFormData } from '../types';
 import { TurnstileWidget } from './TurnstileWidget';
 import {
@@ -18,7 +18,7 @@ import {
 import { motion, AnimatePresence } from 'motion/react';
 
 export const BookingSection: React.FC = () => {
-  const { language, theme } = useApp();
+  const { language, theme, preselectedLevel, setPreselectedLevel } = useApp();
   const data = bookingData[language];
 
   const [formData, setFormData] = useState<BookingFormData>({
@@ -31,6 +31,16 @@ export const BookingSection: React.FC = () => {
     preferredTime: '',
     message: '',
   });
+
+  useEffect(() => {
+    if (preselectedLevel) {
+      setFormData((prev) => ({ ...prev, studentLevel: preselectedLevel }));
+      // Optional: Clear the preselected level after using it so manual changes aren't overridden on re-renders,
+      // but only if the component doesn't get unmounted/remounted unnecessarily.
+      // We can just leave it or clear it. Let's clear it to be safe.
+      setPreselectedLevel(null);
+    }
+  }, [preselectedLevel, setPreselectedLevel]);
 
   const [turnstileToken, setTurnstileToken] = useState<string>('');
   const [resetTurnstileTrigger, setResetTurnstileTrigger] = useState<number>(0);
@@ -184,7 +194,7 @@ export const BookingSection: React.FC = () => {
         {/* Section Header */}
         <div className="max-w-2xl mb-8 md:mb-12">
           <div className="flex items-center gap-2 text-xs font-mono tracking-widest text-teal-700 dark:text-teal-400 uppercase mb-2 font-medium">
-            <span>09</span>
+            <span>08</span>
             <span>—</span>
             <span>{language === 'el' ? 'Προγραμματισμός' : 'Lesson Inquiry'}</span>
           </div>

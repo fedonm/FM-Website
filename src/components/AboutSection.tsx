@@ -1,6 +1,6 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
-import { aboutData } from '../data/content';
+import { aboutData } from '../data';
 import { FlaskConical, Atom, Dna, Layers, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { motion } from 'motion/react';
 

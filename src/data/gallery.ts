@@ -1,0 +1,108 @@
+import { Language, NavItem, BranchingCategory } from '../types';
+
+export const galleryData: Record<Language, {
+  heading: string;
+  subheading: string;
+  items: GalleryItem[];
+}> = {
+  el: {
+    heading: 'Εικόνες & Επιστημονικό Περιβάλλον',
+    subheading: 'Στιγμιότυπα από την έρευνα, τα εργαστηριακά περιβάλλοντα και την ακαδημαϊκή καθημερινότητα.',
+    items: [
+      {
+        id: 'photo-portrait',
+        title: 'Φαίδων Μεσθανεύς',
+        category: 'Προφίλ & Ταυτότητα',
+        description: 'Χημικός & Καθηγητής Χημείας με έδρα τη Θεσσαλονίκη και την Αθήνα.',
+        aspectRatio: 'aspect-square',
+        colorScheme: 'from-slate-800 to-slate-900',
+        tags: ['Προφίλ', 'Χημικός', 'Θεσσαλονίκη'],
+        imageSrc: '/01XHMEIAS_20230727_02370_1_1.JPG',
+        placeholderType: 'portrait',
+      },
+      {
+        id: 'photo-radiochem',
+        title: 'Έρευνα Ραδιοχημείας & Σύνθεσης',
+        category: 'Εργαστηριακή Έρευνα',
+        description: 'Ενασχόληση με τη σύνθεση και τον χαρακτηρισμό ραδιοεπισημασμένων μορίων για διαγνωστικές εφαρμογές.',
+        aspectRatio: 'aspect-4/3',
+        colorScheme: 'from-teal-900 to-emerald-950',
+        tags: ['Ραδιοχημεία', 'MSc ΕΚΠΑ', 'Ραδιοφαρμακευτική'],
+        imageSrc: '/20260401_124244.jpg',
+        placeholderType: 'radiochemistry',
+      },
+      {
+        id: 'photo-spectroscopy',
+        title: 'Ενόργανη Ανάλυση (NMR & HPLC)',
+        category: 'Αναλυτική Χημεία',
+        description: 'Διαλεύκανση δομών με NMR και ποσοτικός διαχωρισμός με τεχνικές HPLC και Radio-TLC.',
+        aspectRatio: 'aspect-4/3',
+        colorScheme: 'from-cyan-950 to-slate-900',
+        tags: ['NMR', 'HPLC', 'ISO 17025'],
+        imageSrc: '/20251111_140508.jpg',
+        placeholderType: 'spectroscopy',
+      },
+      {
+        id: 'photo-teaching',
+        title: 'Διδασκαλία & Επίλυση Προβλημάτων',
+        category: 'Παιδαγωγική Πράξη',
+        description: 'Εξατομικευμένη καθοδήγηση μαθητών και φοιτητών με καθαρή λογική και διαδραστικότητα.',
+        aspectRatio: 'aspect-4/3',
+        colorScheme: 'from-stone-800 to-zinc-900',
+        tags: ['ΠΠΔΕ', 'Ιδιαίτερα Μαθήματα', 'Online & Live'],
+        imageSrc: '/teaching.jpg',
+        placeholderType: 'teaching',
+      },
+    ],
+  },
+  en: {
+    heading: 'Visual Moments & Scientific Environment',
+    subheading: 'Glimpses into laboratory research, analytical instrumentation, and educational mentorship.',
+    items: [
+      {
+        id: 'photo-portrait',
+        title: 'Fedon Mesthanefs',
+        category: 'Profile & Identity',
+        description: 'Chemist & Chemistry Tutor based in Thessaloniki and Athens.',
+        aspectRatio: 'aspect-square',
+        colorScheme: 'from-slate-800 to-slate-900',
+        tags: ['Profile', 'Chemist', 'Thessaloniki'],
+        imageSrc: '/01XHMEIAS_20230727_02370_1_1.JPG',
+        placeholderType: 'portrait',
+      },
+      {
+        id: 'photo-radiochem',
+        title: 'Radiochemistry & Synthesis Research',
+        category: 'Laboratory Research',
+        description: 'Synthesis and evaluation of radiolabeled molecules for biomedical imaging applications.',
+        aspectRatio: 'aspect-4/3',
+        colorScheme: 'from-teal-900 to-emerald-950',
+        tags: ['Radiochemistry', 'MSc NKUA', 'Radiopharmaceuticals'],
+        imageSrc: '/20260401_124244.jpg',
+        placeholderType: 'radiochemistry',
+      },
+      {
+        id: 'photo-spectroscopy',
+        title: 'Instrumental Analysis (NMR & HPLC)',
+        category: 'Analytical Chemistry',
+        description: 'Structural elucidation via NMR and high-resolution chromatographic purification.',
+        aspectRatio: 'aspect-4/3',
+        colorScheme: 'from-cyan-950 to-slate-900',
+        tags: ['NMR', 'HPLC', 'ISO 17025'],
+        imageSrc: '/20251111_140508.jpg',
+        placeholderType: 'spectroscopy',
+      },
+      {
+        id: 'photo-teaching',
+        title: 'Mentorship & Problem Solving',
+        category: 'Pedagogy in Action',
+        description: '1-on-1 personalized tutoring designed to build lasting scientific confidence.',
+        aspectRatio: 'aspect-4/3',
+        colorScheme: 'from-stone-800 to-zinc-900',
+        tags: ['Pedagogy', 'Tutoring', 'Online & Live'],
+        imageSrc: '/teaching.jpg',
+        placeholderType: 'teaching',
+      },
+    ],
+  },
+};

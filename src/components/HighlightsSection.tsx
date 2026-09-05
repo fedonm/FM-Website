@@ -1,6 +1,6 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
-import { highlightsData } from '../data/content';
+import { highlightsData } from '../data';
 import { motion } from 'motion/react';
 
 export const HighlightsSection: React.FC = () => {

@@ -7,7 +7,6 @@ import { PhilosophySection } from './components/PhilosophySection';
 import { EducationSection } from './components/EducationSection';
 import { ExperienceSection } from './components/ExperienceSection';
 import { SkillsSection } from './components/SkillsSection';
-import { HighlightsSection } from './components/HighlightsSection';
 import { GallerySection } from './components/GallerySection';
 import { BookingSection } from './components/BookingSection';
 import { Footer } from './components/Footer';
@@ -52,7 +51,6 @@ function MainLayout() {
         <EducationSection />
         <ExperienceSection />
         <SkillsSection />
-        <HighlightsSection />
         <GallerySection />
         <BookingSection />
       </main>

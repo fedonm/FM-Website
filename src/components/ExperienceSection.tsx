@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
-import { experienceData } from '../data/content';
+import { experienceData } from '../data';
 import { Briefcase, ChevronDown, ChevronUp, ShieldCheck, MapPin, CheckCircle2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 

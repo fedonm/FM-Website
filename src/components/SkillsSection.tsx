@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
-import { skillsData } from '../data/content';
+import { skillsData } from '../data';
 import { FlaskConical, Binary, Languages, LayoutGrid, Info, Sparkles } from 'lucide-react';
 import { motion } from 'motion/react';
 
