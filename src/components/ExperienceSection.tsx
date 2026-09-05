@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'motion/react';
 export const ExperienceSection: React.FC = () => {
   const { language } = useApp();
   const data = experienceData[language];
-  const [expandedIndices, setExpandedIndices] = useState<number[]>([0, 1, 2]);
+  const [expandedIndices, setExpandedIndices] = useState<number[]>([]);
 
   const toggleExpand = (idx: number) => {
     if (expandedIndices.includes(idx)) {

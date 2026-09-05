@@ -19,7 +19,7 @@ export const EducationSection: React.FC = () => {
   const { language } = useApp();
   const data = educationData[language];
   const researchData = aboutData[language];
-  const [expandedIndices, setExpandedIndices] = useState<number[]>([0, 1, 2]); // First 3 expanded by default
+  const [expandedIndices, setExpandedIndices] = useState<number[]>([]); // Collapsed by default
 
   const toggleExpand = (idx: number) => {
     if (expandedIndices.includes(idx)) {
