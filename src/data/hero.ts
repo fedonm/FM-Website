@@ -4,7 +4,7 @@ export const heroData = {
   el: {
     greeting: 'Φαίδων Μεσθανεύς',
     subtitle: 'Χημικός',
-    tagline: 'Η Χημεία γίνεται κατανοητή και συναρπαστική όταν ανακαλύπτεις το "γιατί" πίσω από κάθε αντίδραση.',
+    tagline: 'Ο καλός καθηγητής δεν λύνει απλώς την άσκηση - διδάσκει στον μαθητή πώς να σκέφτεται.',
     description: 'Με εξειδίκευση στη Ραδιοφαρμακευτική Χημεία (MSc 2024-2026) και πιστοποιημένη παιδαγωγική επάρκεια, συνδέω την αυστηρή εργαστηριακή έρευνα με τη σύγχρονη διδασκαλία, υποστηρίζοντας μαθητές και φοιτητές να κατανοήσουν τη βαθύτερη χημική λογική.',
     primaryCta: 'Κλείσε μάθημα',
     secondaryCta: 'Εκπαίδευση & Έρευνα',
@@ -36,7 +36,7 @@ export const heroData = {
   en: {
     greeting: 'Fedon Mesthanefs',
     subtitle: 'Chemist',
-    tagline: 'Chemistry becomes intuitive and engaging when you understand the fundamental "why" behind every phenomenon.',
+    tagline: 'A great tutor doesn\'t merely solve problems; they teach students how to think independently.',
     description: 'Combining research expertise in Radiopharmaceutical Chemistry (MSc 2024-2026) with certified pedagogical training, I bridge rigorous wet-lab experimentation with structured mentoring to help students master chemical logic and excel academically.',
     primaryCta: 'Book a Lesson',
     secondaryCta: 'Education & Research',

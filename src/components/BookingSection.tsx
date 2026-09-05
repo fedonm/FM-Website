@@ -194,7 +194,7 @@ export const BookingSection: React.FC = () => {
         {/* Section Header */}
         <div className="max-w-2xl mb-8 md:mb-12">
           <div className="flex items-center gap-2 text-xs font-mono tracking-widest text-teal-700 dark:text-teal-400 uppercase mb-2 font-medium">
-            <span>08</span>
+            <span>06</span>
             <span>—</span>
             <span>{language === 'el' ? 'Προγραμματισμός' : 'Lesson Inquiry'}</span>
           </div>

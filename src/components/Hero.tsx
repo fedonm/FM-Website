@@ -71,7 +71,7 @@ export const Hero: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.15 }}
               className="border-l-2 border-teal-600/60 dark:border-teal-400/60 pl-4 py-1.5 text-base sm:text-lg text-stone-700 dark:text-slate-300 font-serif italic"
             >
-              "{data.tagline}"
+              {language === 'el' ? '«' : '"'}{data.tagline}{language === 'el' ? '»' : '"'}
             </motion.blockquote>
 
             {/* Bio paragraph */}

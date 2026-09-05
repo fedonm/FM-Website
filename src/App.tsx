@@ -3,7 +3,6 @@ import { AppProvider } from './context/AppContext';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { OfferingsSection } from './components/OfferingsSection';
-import { PhilosophySection } from './components/PhilosophySection';
 import { EducationSection } from './components/EducationSection';
 import { ExperienceSection } from './components/ExperienceSection';
 import { SkillsSection } from './components/SkillsSection';
@@ -47,7 +46,6 @@ function MainLayout() {
       <main className="flex-1 relative z-10">
         <Hero />
         <OfferingsSection />
-        <PhilosophySection />
         <EducationSection />
         <ExperienceSection />
         <SkillsSection />

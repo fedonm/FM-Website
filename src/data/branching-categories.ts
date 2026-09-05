@@ -17,7 +17,7 @@ export const branchingCategoriesData: Record<Language, BranchingCategory[]> = {
           description: 'Στοχευμένη κάλυψη της σχολικής ύλης με έμφαση στην κατανόηση των θεμελιωδών νόμων της Χημείας. Αποσαφήνιση της ατομικής δομής, του περιοδικού πίνακα, της ονοματολογίας και της στοιχειομετρίας.',
           topics: ['Ατομική θεωρία & Περιοδικός πίνακας', 'Χημικοί δεσμοί & Μοριακή δομή', 'Στοιχειομετρικοί υπολογισμοί & Διαλύματα', 'Χημικές αντιδράσεις & Κατηγορίες', 'Εισαγωγή στην Οργανική Χημεία'],
           audience: 'Μαθητές Γυμνασίου και Λυκείου που επιθυμούν υψηλές επιδόσεις και βαθιά κατανόηση.',
-          methodology: 'Συνδυασμός θεωρητικής επεξήγησης με οπτικοποιημένα παραδείγματα, διαβαθμισμένες ασκήσεις και τακτικές επαναλήψεις.',
+          methodology: 'Έμφαση στην κατανόηση εις βάθος, συνδυασμένη με στοχευμένη εξάσκηση και τακτικές επαναλήψεις για πλήρη εμπέδωση της γνώσης.',
         },
         {
           id: 'panhellenic',
@@ -27,7 +27,7 @@ export const branchingCategoriesData: Record<Language, BranchingCategory[]> = {
           description: 'Πλήρης εμβάθυνση στην ύλη των Πανελλαδικών: Χημική Ισορροπία, Οξεοβασική Ισορροπία & Ρυθμιστικά διαλύματα, Θερμοχημεία, Οργανική Χημεία και Ηλεκτρονική Δομή. Εκμάθηση μεθοδολογίας για απαιτητικά θέματα Γ και Δ.',
           topics: ['Διαμοριακές δυνάμεις & Καταστάσεις ύλης', 'Χημική κινητική & Χημική ισορροπία', 'Οξέα, Βάσεις & Ιοντική ισορροπία', 'Οξειδοαναγωγή & Ηλεκτροχημεία', 'Οργανική χημεία & Συνθετικές πορείες'],
           audience: 'Υποψήφιοι Ομάδων Προσανατολισμού Θετικών Σπουδών και Σπουδών Υγείας.',
-          methodology: 'Χρονομετρημένες ασκήσεις, προσομοιώσεις θεμάτων, τεχνικές αποφυγής συνηθισμένων λαθών και καθαρή μαθηματική διατύπωση.',
+          methodology: 'Στρατηγική κατανόησης πολύπλοκων προβλημάτων, στοχευμένη εξάσκηση σε προσομοιώσεις και τεχνικές απόλυτης εμπέδωσης για τις εξετάσεις.',
         },
         {
           id: 'intl-curricula',
@@ -37,7 +37,7 @@ export const branchingCategoriesData: Record<Language, BranchingCategory[]> = {
           description: 'Διδασκαλία Χημείας εξ ολοκλήρου στην Αγγλική γλώσσα (C2 level) για μαθητές International Baccalaureate (SL/HL), British A-Levels, Advanced Placement (AP) και φοιτητές ευρωπαϊκών πανεπιστημίων.',
           topics: ['IB Chemistry Standard & Higher Level', 'Cambridge / Edexcel A-Level Chemistry', 'AP Chemistry Syllabus', 'European University Chemistry Modules', 'Laboratory report analysis and scientific terminology in English'],
           audience: 'Μαθητές διεθνών σχολείων και φοιτητές σε αγγλόφωνα προγράμματα σπουδών.',
-          methodology: 'Official past paper practice, syllabus-specific markscheme analysis, and rigorous English scientific communication.',
+          methodology: 'Deep conceptual understanding, targeted past-paper exercise, and rigorous scientific communication to achieve true knowledge mastery.',
         },
       ],
     },
@@ -155,7 +155,7 @@ export const branchingCategoriesData: Record<Language, BranchingCategory[]> = {
           description: 'Targeted support across standard school syllabi. Demystifying atomic theory, periodic trends, chemical bonding, stoichiometry, and reaction classification.',
           topics: ['Atomic Theory & Periodic Trends', 'Chemical Bonding & Molecular Shapes', 'Stoichiometric Calculations & Solution Chemistry', 'Reaction Types & Equations', 'Introduction to Organic Chemistry'],
           audience: 'Secondary students aiming for academic excellence and genuine comprehension.',
-          methodology: 'Visual breakdowns, graded problem sets, real-world analogies, and active recall check-ins.',
+          methodology: 'Emphasis on deep understanding, coupled with targeted exercise and regular reviews for complete mastery of knowledge.',
         },
         {
           id: 'panhellenic',
@@ -165,7 +165,7 @@ export const branchingCategoriesData: Record<Language, BranchingCategory[]> = {
           description: 'Rigorous mastery of advanced topics: chemical kinetics, equilibrium, acid-base equilibria & buffer systems, thermodynamics, and organic reaction pathways.',
           topics: ['Intermolecular Forces & States of Matter', 'Chemical Kinetics & Dynamic Equilibrium', 'Acid-Base Equilibria & Buffer Chemistry', 'Redox & Electrochemistry', 'Organic Synthesis & Complex Multi-Part Problems'],
           audience: 'Students preparing for Greek Panhellenic examinations or international university admission tests.',
-          methodology: 'Timed exam simulations, precise mathematical justifications, and tailored error analysis.',
+          methodology: 'Strategic understanding of complex problems, targeted exercise in simulations, and proven techniques for exam mastery.',
         },
         {
           id: 'intl-curricula',
@@ -175,7 +175,7 @@ export const branchingCategoriesData: Record<Language, BranchingCategory[]> = {
           description: 'Full instruction conducted in English for students following IB (SL/HL), Cambridge/Edexcel A-Levels, Advanced Placement (AP), or enrolled in English-medium European university programs.',
           topics: ['IB Chemistry Standard & Higher Level', 'Cambridge / Edexcel A-Level Chemistry', 'AP Chemistry Syllabus', 'European University Chemistry Modules', 'Lab report writing & English scientific terminology'],
           audience: 'International school students and European university undergraduates.',
-          methodology: 'Official past paper practice, markscheme alignment, and rigorous scientific articulation.',
+          methodology: 'Deep conceptual understanding, targeted past-paper exercise, and rigorous scientific articulation for absolute mastery.',
         },
       ],
     },
